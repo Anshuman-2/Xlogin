@@ -7,6 +7,10 @@ function XLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (username.trim() === '' || password.trim() === '') {
+      // Do nothing if either field is empty
+      return;
+    }
     if (username === 'user' && password === 'password') {
       setMessage('Welcome, user!');
     } else {
