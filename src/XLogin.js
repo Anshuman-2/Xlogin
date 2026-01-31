@@ -21,24 +21,28 @@ function XLogin() {
       <h2 style={{ textAlign: 'center', marginBottom: 24 }}>Login Page</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 16 }}>
-          <label htmlFor="username">Username</label><br />
-          <input
-            id="username"
-            type="text"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-            style={{ width: '100%', padding: 8, marginTop: 4 }}
-          />
+          <label style={{ display: 'block', marginBottom: 8 }}>
+            Username
+            <input
+              id="username"
+              type="text"
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+              style={{ width: '100%', padding: 8, marginTop: 4, display: 'block' }}
+            />
+          </label>
         </div>
         <div style={{ marginBottom: 16 }}>
-          <label htmlFor="password">Password</label><br />
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            style={{ width: '100%', padding: 8, marginTop: 4 }}
-          />
+          <label style={{ display: 'block', marginBottom: 8 }}>
+            Password
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              style={{ width: '100%', padding: 8, marginTop: 4, display: 'block' }}
+            />
+          </label>
         </div>
         <button type="submit" disabled={!isFormValid} style={{ width: '100%', padding: 10 }}>
           Submit
