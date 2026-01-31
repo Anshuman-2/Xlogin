@@ -25,6 +25,8 @@ function XLogin() {
             Username
             <input
               id="username"
+              name="username"
+              data-testid="username-input"
               type="text"
               value={username}
               onChange={e => setUsername(e.target.value)}
@@ -37,6 +39,8 @@ function XLogin() {
             Password
             <input
               id="password"
+              name="password"
+              data-testid="password-input"
               type="password"
               value={password}
               onChange={e => setPassword(e.target.value)}
@@ -44,7 +48,12 @@ function XLogin() {
             />
           </label>
         </div>
-        <button type="submit" disabled={!isFormValid} style={{ width: '100%', padding: 10 }}>
+        <button
+          type="submit"
+          data-testid="submit-button"
+          disabled={!isFormValid}
+          style={{ width: '100%', padding: 10 }}
+        >
           Submit
         </button>
       </form>
