@@ -6,8 +6,8 @@ function XLogin() {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
+    // Let browser validation handle empty fields
     if (username.trim() === '' || password.trim() === '') {
-      // Let browser validation handle empty fields
       return;
     }
     e.preventDefault();
@@ -18,7 +18,6 @@ function XLogin() {
     }
   };
 
-  const isFormValid = username.trim() !== '' && password.trim() !== '';
 
   return (
     <div>
@@ -32,7 +31,7 @@ function XLogin() {
             type="text"
             value={username}
             onChange={e => setUsername(e.target.value)}
-              required
+            required
           />
         </div>
         <div>
@@ -43,7 +42,7 @@ function XLogin() {
             type="password"
             value={password}
             onChange={e => setPassword(e.target.value)}
-              required
+            required
           />
         </div>
         <button type="submit">
