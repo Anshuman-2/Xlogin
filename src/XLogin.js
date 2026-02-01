@@ -32,7 +32,7 @@ function XLogin() {
             type="text"
             value={username}
             onChange={e => setUsername(e.target.value)}
-            required
+              required
           />
         </div>
         <div>
@@ -43,7 +43,7 @@ function XLogin() {
             type="password"
             value={password}
             onChange={e => setPassword(e.target.value)}
-            required
+              required
           />
         </div>
         <button type="submit" disabled={!isFormValid}>
