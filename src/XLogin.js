@@ -6,11 +6,11 @@ function XLogin() {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     if (username.trim() === '' || password.trim() === '') {
-      // Do nothing if either field is empty
+      // Let browser validation handle empty fields
       return;
     }
+    e.preventDefault();
     if (username === 'user' && password === 'password') {
       setMessage('Welcome, user!');
     } else {
@@ -46,7 +46,7 @@ function XLogin() {
               required
           />
         </div>
-        <button type="submit" disabled={!isFormValid}>
+        <button type="submit">
           Submit
         </button>
       </form>
